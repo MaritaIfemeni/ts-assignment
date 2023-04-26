@@ -10,7 +10,7 @@ Implement the following classes, interface, and codes (you can decide which file
 1. Class Bank
 
     - It has two properties: `name` (string), `branches` (array of type Branch[])
-
+    
     - A constructor that takes an argumment name (string). It initialises name and instantiates branches as empty array.
 
     - And six methods:
