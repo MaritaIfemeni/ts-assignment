@@ -21,6 +21,11 @@ arizonaBank.addCustomer(westBranch, customer3)
 arizonaBank.addCustomer(sunBranch, customer1)
 arizonaBank.addCustomer(sunBranch, customer2)
 
+// I Wasn't able to make these lines to work, I had to call the getId() method to get the id of the customer, there was a problem making the callBack function to work I guess. 
+// arizonaBank.addCustomerTransaction(westBranch, customer1.getId, 3000)    
+// arizonaBank.addCustomerTransaction(westBranch, customer1.getId, 2000)
+// arizonaBank.addCustomerTransaction(westBranch, customer2.getId, 3000)
+
 arizonaBank.addCustomerTransaction(westBranch, customer1.getId(), 3000)
 arizonaBank.addCustomerTransaction(westBranch, customer1.getId(), 2000)
 arizonaBank.addCustomerTransaction(westBranch, customer2.getId(), 3000)

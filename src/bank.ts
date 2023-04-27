@@ -4,7 +4,6 @@ import Branch from "./branch";
 class Bank {
   private name: string;
   private branches: Branch[];
-  
   constructor(name: string) {
     this.name = name;
     this.branches = [];
@@ -25,17 +24,20 @@ class Bank {
       return true;
     } else {
       branch.getCustomers().push(customer);
-      console.log(`Added customer ${customer.getName()} to branch ${branch.getName()}`);
+      console.log(
+        `Added customer ${customer.getName()} to branch ${branch.getName()}`
+      );
       return true;
     }
   }
   addCustomerTransaction(branch: Branch, customerId: string, amount: number) {
-    const isCustomerOfBranch = branch.getCustomers().some(
-      (c) => c.getId() === customerId
-    );
-
+    const isCustomerOfBranch = branch
+      .getCustomers()
+      .some((c) => c.getId() === customerId);
     if (isCustomerOfBranch) {
-      const customer = branch.getCustomers().find((c) => c.getId() === customerId);
+      const customer = branch
+        .getCustomers()
+        .find((c) => c.getId() === customerId);
       customer?.getTransactions().push({ amount, date: new Date() });
       console.log(
         `Added transaction of ${amount} for customer with ID ${customer?.getId()}`
